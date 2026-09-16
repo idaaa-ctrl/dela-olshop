@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TokoHub - Platform Jual Beli Modern</title>
+    <meta name="description" content="Platform e-commerce simpel, cepat, dan modern untuk belanja barang favorit Anda secara langsung via WhatsApp.">
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-slate-50 text-slate-800 antialiased font-sans min-h-screen flex flex-col selection:bg-blue-500 selection:text-white">
+
+    <!-- Header & Navigation -->
+    <header class="sticky top-0 z-40 bg-white/90 backdrop-blur-md border-b border-slate-200 transition-all duration-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16 gap-4">
+                
+                <!-- Logo -->
+                <a href="#" class="flex items-center gap-2 group">
+                    <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-blue-600 to-indigo-600 flex items-center justify-center text-white shadow-md shadow-blue-500/20 group-hover:scale-105 transition-transform">
+                        <i data-lucide="shopping-bag" class="w-5 h-5"></i>
+                    </div>
+                    <span class="text-xl font-extrabold tracking-tight bg-gradient-to-r from-blue-600 to-indigo-700 bg-clip-text text-transparent">TokoHub</span>
+                </a>
+
+                <!-- Search Input Desktop -->
+                <div class="hidden md:flex flex-1 max-w-md relative">
+                    <input type="text" id="searchInput" placeholder="Cari barang favorit Anda..." 
+                        class="w-full pl-10 pr-4 py-2 bg-slate-100 border border-transparent rounded-full text-sm focus:outline-none focus:bg-white focus:border-blue-500 focus:ring-2 focus:ring-blue-100 transition">
+                    <i data-lucide="search" class="w-4 h-4 absolute left-3.5 top-3 text-slate-400"></i>
+                </div>
+
+                <!-- Right Actions -->
+                <div class="flex items-center gap-3">
+                    <button id="cartToggleBtn" class="relative inline-flex items-center gap-2 px-4 py-2 rounded-full bg-blue-50 text-blue-700 font-semibold text-sm hover:bg-blue-100 transition active:scale-95">
+                        <i data-lucide="shopping-cart" class="w-4 h-4"></i>
+                        <span class="hidden sm:inline">Keranjang</span>
+                        <span id="cartCountBadge" class="inline-flex items-center justify-center px-2 py-0.5 text-xs font-bold leading-none text-white bg-blue-600 rounded-full">0</span>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Search Bar Mobile -->
+            <div class="pb-3 md:hidden">
+                <div class="relative">
+                    <input type="text" id="mobileSearchInput" placeholder="Cari produk..." 
+                        class="w-full pl-10 pr-4 py-2 bg-slate-100 border border-transparent rounded-full text-sm focus:outline-none focus:bg-white focus:border-blue-500 transition">
+                    <i data-lucide="search" class="w-4 h-4 absolute left-3.5 top-3 text-slate-400"></i>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Banner -->
+    <section class="relative bg-gradient-to-br from-slate-900 via-indigo-950 to-blue-900 text-white overflow-hidden py-12 md:py-20">
+        <div class="absolute inset-0 bg-[radial-gradient(circle_at_30%_30%,rgba(59,130,246,0.15),transparent)]"></div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="max-w-2xl">
+                <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold bg-blue-500/20 border border-blue-400/30 text-blue-300 mb-4">
+                    <i data-lucide="sparkles" class="w-3.5 h-3.5"></i> Promo Spesial Pekan Ini
+                </span>
+                <h1 class="text-3xl sm:text-5xl font-black tracking-tight leading-tight mb-4">
+                    Belanja Barang Premium dengan Pengiriman Cepat
+                </h1>
+                <p class="text-slate-300 text-base sm:text-lg mb-8 leading-relaxed">
+                    Jelajahi berbagai pilihan produk berkualitas terbaik, harga transparan, dan kemudahan transaksi langsung terhubung ke WhatsApp.
+                </p>
+                <div class="flex flex-wrap gap-4">
+                    <a href="#katalog" class="px-6 py-3 rounded-full bg-blue-600 text-white font-bold hover:bg-blue-500 shadow-lg shadow-blue-600/30 transition transform hover:-translate-y-0.5">
+                        Jelajahi Katalog
+                    </a>
+                    <a href="#keunggulan" class="px-6 py-3 rounded-full bg-white/10 backdrop-blur-sm text-white font-semibold hover:bg-white/20 transition">
+                        Pelajari Lebih Lanjut
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Key Highlights / Badges -->
+    <section id="keunggulan" class="bg-white border-b border-slate-200 py-6">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4 text-center">
+                <div class="p-3 flex items-center justify-center gap-3">
+                    <div class="p-2.5 bg-blue-50 text-blue-600 rounded-xl"><i data-lucide="truck" class="w-5 h-5"></i></div>
+                    <div class="text-left">
+                        <h4 class="text-xs font-bold text-slate-800">Pengiriman Cepat</h4>
+                        <p class="text-[11px] text-slate-500">Ke seluruh Indonesia</p>
+                    </div>
+                </div>
+                <div class="p-3 flex items-center justify-center gap-3">
+                    <div class="p-2.5 bg-green-50 text-green-600 rounded-xl"><i data-lucide="shield-check" class="w-5 h-5"></i></div>
+                    <div class="text-left">
+                        <h4 class="text-xs font-bold text-slate-800">100% Original</h4>
+                        <p class="text-[11px] text-slate-500">Jaminan mutu terbaik</p>
+                    </div>
+                </div>
+                <div class="p-3 flex items-center justify-center gap-3">
+                    <div class="p-2.5 bg-amber-50 text-amber-600 rounded-xl"><i data-lucide="badge-percent" class="w-5 h-5"></i></div>
+                    <div class="text-left">
+                        <h4 class="text-xs font-bold text-slate-800">Harga Terbaik</h4>
+                        <p class="text-[11px] text-slate-500">Banyak diskon menarik</p>
+                    </div>
+                </div>
+                <div class="p-3 flex items-center justify-center gap-3">
+                    <div class="p-2.5 bg-indigo-50 text-indigo-600 rounded-xl"><i data-lucide="message-square-text" class="w-5 h-5"></i></div>
+                    <div class="text-left">
+                        <h4 class="text-xs font-bold text-slate-800">Respon Cepat</h4>
+                        <p class="text-[11px] text-slate-500">Layanan ramah 24/7</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content / Catalog -->
+    <main id="katalog" class="flex-1 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 w-full">
+        
+        <!-- Section Title & Filter Controls -->
+        <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-4 mb-8">
+            <div>
+                <h2 class="text-2xl font-bold text-slate-900">Katalog Produk</h2>
+                <p class="text-sm text-slate-500">Temukan barang berkualitas sesuai kebutuhan Anda</p>
+            </div>
+
+            <!-- Categories & Sorting Controls -->
+            <div class="flex flex-wrap items-center gap-2">
+                <div class="flex overflow-x-auto pb-1 gap-1.5 no-scrollbar" id="categoryFilterContainer">
+                    <button data-category="all" class="category-btn active">Semua</button>
+                    <button data-category="fashion" class="category-btn">Fashion</button>
+                    <button data-category="elektronik" class="category-btn">Elektronik</button>
+                    <button data-category="aksesoris" class="category-btn">Aksesoris</button>
+                    <button data-category="gaya-hidup" class="category-btn">Gaya Hidup</button>
+                </div>
+
+                <div class="ml-auto">
+                    <select id="sortSelect" class="bg-white border border-slate-200 text-xs font-medium rounded-lg px-3 py-2 text-slate-700 focus:outline-none focus:border-blue-500 shadow-sm">
+                        <option value="default">Urutkan: Default</option>
+                        <option value="price-low">Harga: Terendah</option>
+                        <option value="price-high">Harga: Tertinggi</option>
+                        <option value="rating">Rating Tertinggi</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+
+        <!-- Product Grid -->
+        <div id="productGrid" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+            <!-- Product Cards injected via JavaScript -->
+        </div>
+
+        <!-- Empty State -->
+        <div id="emptyState" class="hidden text-center py-16">
+            <div class="w-16 h-16 bg-slate-100 rounded-full flex items-center justify-center mx-auto mb-4 text-slate-400">
+                <i data-lucide="package-x" class="w-8 h-8"></i>
+            </div>
+            <h3 class="text-lg font-bold text-slate-800 mb-1">Produk tidak ditemukan</h3>
+            <p class="text-sm text-slate-500 mb-4">Coba cari dengan kata kunci lain atau pilih kategori yang berbeda.</p>
+            <button id="resetFilterBtn" class="px-4 py-2 bg-blue-600 text-white rounded-lg text-sm font-semibold hover:bg-blue-700 transition">
+                Reset Filter
+            </button>
+        </div>
+    </main>
+
+    <!-- Shopping Cart Drawer Overlay -->
+    <div id="cartOverlay" class="fixed inset-0 bg-slate-900/50 backdrop-blur-xs opacity-0 pointer-events-none transition-opacity duration-300 z-50"></div>
+
+    <!-- Shopping Cart Drawer -->
+    <div id="cartDrawer" class="fixed top-0 right-0 bottom-0 w-full max-w-md bg-white shadow-2xl transform translate-x-full transition-transform duration-300 z-50 flex flex-col">
+        <!-- Cart Header -->
+        <div class="p-4 border-b border-slate-100 flex items-center justify-between bg-slate-50">
+            <div class="flex items-center gap-2">
+                <i data-lucide="shopping-bag" class="w-5 h-5 text-blue-600"></i>
+                <h3 class="font-bold text-slate-900">Keranjang Belanja</h3>
+            </div>
+            <button id="closeCartBtn" class="p-1 rounded-lg text-slate-400 hover:text-slate-600 hover:bg-slate-200 transition">
+                <i data-lucide="x" class="w-5 h-5"></i>
+            </button>
+        </div>
+
+        <!-- Cart Items List -->
+        <div id="cartItemsContainer" class="flex-1 overflow-y-auto p-4 space-y-4">
+            <!-- Items injected via JS -->
+        </div>
+
+        <!-- Cart Summary & Checkout Form -->
+        <div class="border-t border-slate-200 p-4 bg-slate-50 space-y-3">
+            <div class="space-y-1.5 text-xs text-slate-600">
+                <div class="flex justify-between">
+                    <span>Subtotal</span>
+                    <span id="cartSubtotal" class="font-semibold text-slate-800">Rp 0</span>
+                </div>
+                <div class="flex justify-between">
+                    <span>Biaya Layanan</span>
+                    <span class="font-semibold text-green-600">GRATIS</span>
+                </div>
+                <div class="flex justify-between text-sm font-bold text-slate-900 pt-2 border-t border-slate-200">
+                    <span>Total Tagihan</span>
+                    <span id="cartTotal" class="text-blue-600">Rp 0</span>
+                </div>
+            </div>
+
+            <!-- Customer Details for Checkout -->
+            <div class="pt-2 space-y-2">
+                <input type="text" id="custName" placeholder="Nama Lengkap Anda" class="w-full px-3 py-2 text-xs border border-slate-300 rounded-lg focus:outline-none focus:ring-1 focus:ring-blue-500">
+                <textarea id="custAddress" rows="2" placeholder="Alamat Pengiriman Lengkap" class="w-full px-3 py-2 text-xs border border-slate-300 rounded-lg focus:outline-none focus:ring-1 focus:ring-blue-500 resize-none"></textarea>
+            </div>
+
+            <!-- Action Button -->
+            <button id="checkoutWaBtn" class="w-full py-3 bg-emerald-600 hover:bg-emerald-700 text-white font-bold rounded-xl shadow-lg shadow-emerald-600/20 flex items-center justify-center gap-2 transition active:scale-98">
+                <i data-lucide="message-circle" class="w-5 h-5"></i>
+                Beli via WhatsApp
+            </button>
+        </div>
+    </div>
+
+    <!-- Product Detail Modal Overlay -->
+    <div id="productModal" class="fixed inset-0 bg-slate-900/60 backdrop-blur-sm opacity-0 pointer-events-none transition-opacity duration-200 z-50 flex items-center justify-center p-4">
+        <div class="bg-white rounded-2xl max-w-xl w-full overflow-hidden shadow-2xl transform scale-95 transition-transform duration-200 relative" id="modalCard">
+            <button id="closeModalBtn" class="absolute top-3 right-3 z-10 w-8 h-8 rounded-full bg-white/80 backdrop-blur-sm flex items-center justify-center text-slate-600 hover:bg-white shadow transition">
+                <i data-lucide="x" class="w-4 h-4"></i>
+            </button>
+
+            <div class="grid grid-cols-1 md:grid-cols-2">
+                <div class="h-64 md:h-full bg-slate-100 relative">
+                    <img id="modalImg" src="" alt="" class="w-full h-full object-cover">
+                    <span id="modalBadge" class="absolute top-3 left-3 bg-red-500 text-white text-[10px] font-bold px-2 py-0.5 rounded-full"></span>
+                </div>
+                <div class="p-6 flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center gap-1 text-amber-500 text-xs font-semibold mb-1">
+                            <i data-lucide="star" class="w-3.5 h-3.5 fill-current"></i>
+                            <span id="modalRating">4.9</span>
+                            <span class="text-slate-400 font-normal ml-1">(<span id="modalSold">0</span> terjual)</span>
+                        </div>
+                        <h3 id="modalTitle" class="text-lg font-bold text-slate-900 mb-2">Nama Produk</h3>
+                        <div class="flex items-baseline gap-2 mb-4">
+                            <span id="modalPrice" class="text-xl font-extrabold text-blue-600">Rp 0</span>
+                            <span id="modalOrigPrice" class="text-xs text-slate-400 line-through">Rp 0</span>
+                        </div>
+                        <p id="modalDesc" class="text-xs text-slate-600 leading-relaxed mb-6">
+                            Deskripsi produk lengkap akan muncul di sini.
+                        </p>
+                    </div>
+
+                    <button id="modalAddToCartBtn" class="w-full py-2.5 bg-blue-600 hover:bg-blue-700 text-white font-bold rounded-xl text-sm flex items-center justify-center gap-2 transition">
+                        <i data-lucide="plus-circle" class="w-4 h-4"></i>
+                        Tambah ke Keranjang
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Notification Toast -->
+    <div id="toast" class="fixed bottom-5 left-1/2 -translate-x-1/2 bg-slate-900 text-white px-5 py-3 rounded-full text-xs font-semibold shadow-xl opacity-0 transition-all duration-300 pointer-events-none z-50 flex items-center gap-2">
+        <i data-lucide="check-circle" class="w-4 h-4 text-emerald-400"></i>
+        <span id="toastMsg">Produk berhasil ditambahkan!</span>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-slate-900 text-slate-400 text-xs border-t border-slate-800 mt-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
+                <div>
+                    <div class="flex items-center gap-2 text-white font-bold text-base mb-3">
+                        <div class="w-7 h-7 rounded-lg bg-blue-600 flex items-center justify-center text-white">
+                            <i data-lucide="shopping-bag" class="w-4 h-4"></i>
+                        </div>
+                        TokoHub
+                    </div>
+                    <p class="text-slate-400 leading-relaxed">
+                        Platform katalog e-commerce modern, responsif, dan gratis hosted langsung di GitHub Pages.
+                    </p>
+                </div>
+                <div>
+                    <h4 class="text-white font-semibold mb-3">Metode Pembayaran & Transaksi</h4>
+                    <p class="leading-relaxed">
+                        Pemesanan diproses secara instan melalui integrasi format otomatis WhatsApp & Google Sheets API.
+                    </p>
+                </div>
+                <div>
+                    <h4 class="text-white font-semibold mb-3">Hubungi Kami</h4>
+                    <p class="leading-relaxed mb-2">Punya pertanyaan atau ingin custom website?</p>
+                    <a href="https://wa.me/6281234567890" target="_blank" class="inline-flex items-center gap-1.5 text-emerald-400 hover:underline">
+                        <i data-lucide="message-circle" class="w-4 h-4"></i> Chat Customer Service
+                    </a>
+                </div>
+            </div>
+            <div class="border-t border-slate-800 pt-6 text-center">
+                <p>&copy; 2026 TokoHub. Dibuat dengan antusiasme tinggi untuk pengembangan UMKM Indonesia.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript Script -->
+    <script src="script.js"></script>
+</body>
+</html>

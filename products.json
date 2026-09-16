@@ -1,0 +1,98 @@
+[
+    {
+        "id": 1,
+        "name": "Sneakers Edisi Terbatas Urban White",
+        "category": "fashion",
+        "price": 349000,
+        "originalPrice": 499000,
+        "rating": 4.8,
+        "sold": 124,
+        "image": "https://images.unsplash.com/photo-1549298916-b41d501d3772?auto=format&fit=crop&w=600&q=80",
+        "description": "Sepatu sneakers bergaya kontemporer dengan bahan sintetis premium berpori udara. Cocok untuk penggunaan harian dan aktivitas kasual dengan kenyamanan maksimal.",
+        "badge": "Diskon 30%"
+    },
+    {
+        "id": 2,
+        "name": "Headphone Wireless BassBoost Pro",
+        "category": "elektronik",
+        "price": 529000,
+        "originalPrice": 750000,
+        "rating": 4.9,
+        "sold": 89,
+        "image": "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&fit=crop&w=600&q=80",
+        "description": "Headphone nirkabel Bluetooth 5.3 dengan noise cancellation pasif dan ketahanan baterai hingga 40 jam penggunaan nonstop.",
+        "badge": "Terlaris"
+    },
+    {
+        "id": 3,
+        "name": "Jam Tangan Minimalis Classic Black",
+        "category": "aksesoris",
+        "price": 289000,
+        "originalPrice": 399000,
+        "rating": 4.7,
+        "sold": 210,
+        "image": "https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=600&q=80",
+        "description": "Jam tangan analog elegan dengan tali kulit asli tahan lama, kaca anti gores, serta daya tahan air hingga 3 ATM.",
+        "badge": "Hemat"
+    },
+    {
+        "id": 4,
+        "name": "Ransel Waterproof Urban Explorer 25L",
+        "category": "aksesoris",
+        "price": 215000,
+        "originalPrice": 299000,
+        "rating": 4.8,
+        "sold": 310,
+        "image": "https://images.unsplash.com/photo-1553062407-98eeb64c6a62?auto=format&fit=crop&w=600&q=80",
+        "description": "Tas punggung ergonomis dengan kompartemen laptop hingga 15.6 inci, bahan poliester anti air, serta slot charger USB terintegrasi.",
+        "badge": "Populer"
+    },
+    {
+        "id": 5,
+        "name": "Smartwatch Sport Fitness Tracker V2",
+        "category": "elektronik",
+        "price": 450000,
+        "originalPrice": 620000,
+        "rating": 4.6,
+        "sold": 78,
+        "image": "https://images.unsplash.com/photo-1579586337278-3befd40fd17a?auto=format&fit=crop&w=600&q=80",
+        "description": "Jam tangan pintar dengan layar AMOLED, pemantau detak jantung 24/7, pelacak kadar oksigen darah SpO2, dan 15 mode olahraga.",
+        "badge": "Baru"
+    },
+    {
+        "id": 6,
+        "name": "Jaket Hoodie Premium Cotton Fleece",
+        "category": "fashion",
+        "price": 195000,
+        "originalPrice": 260000,
+        "rating": 4.9,
+        "sold": 450,
+        "image": "https://images.unsplash.com/photo-1556905055-8f358a7a47b2?auto=format&fit=crop&w=600&q=80",
+        "description": "Hoodie berbahan cotton fleece lembut, hangat namun tetap adem saat dikenakan. Desain simpel cocok untuk pria dan wanita.",
+        "badge": "Best Value"
+    },
+    {
+        "id": 7,
+        "name": "Tumbler Stainless Steel Termos 750ml",
+        "category": "gaya-hidup",
+        "price": 125000,
+        "originalPrice": 180000,
+        "rating": 4.8,
+        "sold": 530,
+        "image": "https://images.unsplash.com/photo-1602143407151-7111542de6e8?auto=format&fit=crop&w=600&q=80",
+        "description": "Botol minum vakum terisolasi ganda, sanggup menjaga suhu minuman panas hingga 12 jam atau dingin hingga 24 jam.",
+        "badge": "Ramah Lingkungan"
+    },
+    {
+        "id": 8,
+        "name": "Kacamata Hitam Polarized UV400",
+        "category": "aksesoris",
+        "price": 135000,
+        "originalPrice": 199000,
+        "rating": 4.7,
+        "sold": 165,
+        "image": "https://images.unsplash.com/photo-1511499767150-a48a237f0083?auto=format&fit=crop&w=600&q=80",
+        "description": "Kacamata rasi gaya klasik dengan lensa polarized anti kilau dan perlindungan 100% terhadap sinar UV400 matahari.",
+        "badge": "Trendy"
+    }
+]
